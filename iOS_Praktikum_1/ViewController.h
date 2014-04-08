@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtTitle;
 @property (weak, nonatomic) IBOutlet UITextField *txtISBN;
 @property (weak, nonatomic) IBOutlet UIButton *btnAddBook;
-@property (weak , nonatomic) IBOutlet UITableView *tbvBooks;
 
 - (IBAction)actionAddBookToView:(id)sender;
 

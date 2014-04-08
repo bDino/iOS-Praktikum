@@ -13,10 +13,10 @@
 -(id)init
 {
     if (self = [super init])
-        {
-            self.items = [[NSMutableArray alloc] init];
-        }
-        return self;
+    {
+        self.items = [[NSMutableArray alloc] init];
+    }
+    return self;
 }
 
 -(void) addItem:(NSObject *)item
@@ -28,7 +28,7 @@
 {
     for (Item* book in self.items)
     {
-       NSLog(@"%@",book);
+        NSLog(@"%@",book);
     }
 }
 
