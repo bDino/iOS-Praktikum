@@ -10,4 +10,14 @@
 
 @implementation Item
 
+-(id)init
+{
+    if (self = [super init])
+    {
+        self.title = @"";
+    }
+
+    return self;
+}
+
 @end

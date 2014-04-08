@@ -10,6 +10,6 @@
 
 @interface Item : NSObject
 
-@property (strong,nonatomic) NSString *Title;
+@property (strong,nonatomic) NSString *title;
 
 @end

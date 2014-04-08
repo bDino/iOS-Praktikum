@@ -26,10 +26,7 @@
 
 -(void) printList
 {
-    for (Item* book in self.items)
-    {
-        NSLog(@"%@",book);
-    }
+    NSLog(@"%@", self.items);
 }
 
 @end

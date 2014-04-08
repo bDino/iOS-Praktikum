@@ -11,7 +11,7 @@
 
 @interface Book : Item
 
-@property (strong,nonatomic) NSString *Author;
+@property (strong,nonatomic) NSString *author;
 @property (strong,nonatomic) NSString *ISBN;
 
 @end

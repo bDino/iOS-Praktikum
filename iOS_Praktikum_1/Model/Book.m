@@ -10,9 +10,20 @@
 
 @implementation Book
 
+-(id)init
+{
+    if (self = [super init])
+    {
+        self.author = @"";
+        self.ISBN = @"";
+    }
+
+    return self;
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"\nTitle: %@ \nAuthor: %@ \nISBN: %@",
-            self.Title, self.Author, self.ISBN];
+            self.title, self.author, self.ISBN];
 }
 @end
