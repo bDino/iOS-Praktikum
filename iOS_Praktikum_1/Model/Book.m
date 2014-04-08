@@ -23,7 +23,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"\nTitle: %@ \nAuthor: %@ \nISBN: %@",
+    return [NSString stringWithFormat:@"Title: %@, Author: %@, ISBN: %@",
             self.title, self.author, self.ISBN];
 }
 @end
