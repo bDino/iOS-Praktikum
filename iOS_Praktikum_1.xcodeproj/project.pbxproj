@@ -21,9 +21,9 @@
 		3165B67518F06B8700CC41F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3165B65718F06B8700CC41F0 /* UIKit.framework */; };
 		3165B67D18F06B8700CC41F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3165B67B18F06B8700CC41F0 /* InfoPlist.strings */; };
 		3165B67F18F06B8700CC41F0 /* iOS_Praktikum_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3165B67E18F06B8700CC41F0 /* iOS_Praktikum_1Tests.m */; };
-		3165B68B18F06C2900CC41F0 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 3165B68A18F06C2900CC41F0 /* Book.m */; };
 		3165B68E18F0700700CC41F0 /* ItemListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3165B68D18F0700700CC41F0 /* ItemListManager.m */; };
-		31ED3DE118F197960082312B /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ED3DE018F197960082312B /* Item.m */; };
+		F11782E418F405BF004F078D /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = F11782E118F405BF004F078D /* Book.m */; };
+		F11782E518F405BF004F078D /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = F11782E318F405BF004F078D /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +56,12 @@
 		3165B67A18F06B8700CC41F0 /* iOS_Praktikum_1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS_Praktikum_1Tests-Info.plist"; sourceTree = "<group>"; };
 		3165B67C18F06B8700CC41F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3165B67E18F06B8700CC41F0 /* iOS_Praktikum_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_Praktikum_1Tests.m; sourceTree = "<group>"; };
-		3165B68918F06C2900CC41F0 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
-		3165B68A18F06C2900CC41F0 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		3165B68C18F0700700CC41F0 /* ItemListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListManager.h; sourceTree = "<group>"; };
 		3165B68D18F0700700CC41F0 /* ItemListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListManager.m; sourceTree = "<group>"; };
-		31ED3DDF18F197960082312B /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		31ED3DE018F197960082312B /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		F11782E018F405BF004F078D /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = Model/Book.h; sourceTree = "<group>"; };
+		F11782E118F405BF004F078D /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Model/Book.m; sourceTree = "<group>"; };
+		F11782E218F405BF004F078D /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = Model/Item.h; sourceTree = "<group>"; };
+		F11782E318F405BF004F078D /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Model/Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,9 @@
 		3165B65918F06B8700CC41F0 /* iOS_Praktikum_1 */ = {
 			isa = PBXGroup;
 			children = (
-				3165B68818F06BD700CC41F0 /* Modell */,
+				3165B68818F06BD700CC41F0 /* Model */,
+				3165B68C18F0700700CC41F0 /* ItemListManager.h */,
+				3165B68D18F0700700CC41F0 /* ItemListManager.m */,
 				3165B66218F06B8700CC41F0 /* AppDelegate.h */,
 				3165B66318F06B8700CC41F0 /* AppDelegate.m */,
 				3165B66518F06B8700CC41F0 /* Main.storyboard */,
@@ -162,17 +164,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3165B68818F06BD700CC41F0 /* Modell */ = {
+		3165B68818F06BD700CC41F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3165B68918F06C2900CC41F0 /* Book.h */,
-				3165B68A18F06C2900CC41F0 /* Book.m */,
-				3165B68C18F0700700CC41F0 /* ItemListManager.h */,
-				3165B68D18F0700700CC41F0 /* ItemListManager.m */,
-				31ED3DDF18F197960082312B /* Item.h */,
-				31ED3DE018F197960082312B /* Item.m */,
+				F11782E018F405BF004F078D /* Book.h */,
+				F11782E118F405BF004F078D /* Book.m */,
+				F11782E218F405BF004F078D /* Item.h */,
+				F11782E318F405BF004F078D /* Item.m */,
 			);
-			name = Modell;
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31ED3DE118F197960082312B /* Item.m in Sources */,
-				3165B68B18F06C2900CC41F0 /* Book.m in Sources */,
+				F11782E518F405BF004F078D /* Item.m in Sources */,
+				F11782E418F405BF004F078D /* Book.m in Sources */,
 				3165B66A18F06B8700CC41F0 /* ViewController.m in Sources */,
 				3165B66418F06B8700CC41F0 /* AppDelegate.m in Sources */,
 				3165B68E18F0700700CC41F0 /* ItemListManager.m in Sources */,
