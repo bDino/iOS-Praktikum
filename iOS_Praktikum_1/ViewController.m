@@ -31,25 +31,32 @@
 {
     if(![self.txtTitle.text isEqualToString:@""] && ![self.txtISBN.text isEqualToString:@""])
     {
-        Book *newBook = [[Book alloc] init];
-
-        newBook.title = self.txtTitle.text;
-        newBook.author = self.txtAuthor.text;
-        newBook.ISBN = self.txtISBN.text;
-
-        //check if add was successfull and delte the old data
-        NSInteger oldItemCount = [self.manager.items count];
-        [self.manager addItem:newBook];
-
-        if(oldItemCount != [self.manager.items count])
+        Book *book = [self createBookFromInputs];
+        if (![self.manager containsItem: book])
         {
-            self.txtAuthor.text = @"";
-            self.txtTitle.text = @"";
-            self.txtISBN.text = @"";
-
+            [self.manager addItem:book];
+            [self clearInputFields];
             [self.manager printList];
         }
     }
+}
+
+- (Book*)createBookFromInputs
+{
+    Book *book = [[Book alloc] init];
+
+    book.title = self.txtTitle.text;
+    book.author = self.txtAuthor.text;
+    book.ISBN = self.txtISBN.text;
+
+    return book;
+}
+
+- (void)clearInputFields
+{
+    self.txtAuthor.text = @"";
+    self.txtTitle.text = @"";
+    self.txtISBN.text = @"";
 }
 
 @end

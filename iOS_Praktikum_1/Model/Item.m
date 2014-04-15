@@ -20,4 +20,12 @@
     return self;
 }
 
+-(BOOL)isEqual:(id)object
+{
+    if (![object isKindOfClass: self.class]) return NO;
+
+    Item *other = (Item*) object;
+    return [self.title isEqualToString: other.title];
+}
+
 @end

@@ -14,6 +14,7 @@
 @property (strong,nonatomic) NSMutableArray *items;
 
 -(void) addItem:(Item*) item;
+-(BOOL) containsItem:(Item*) item;
 -(void) printList;
 
 @end

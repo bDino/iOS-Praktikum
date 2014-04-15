@@ -21,6 +21,15 @@
     return self;
 }
 
+- (BOOL)isEqual:(id)object
+{
+    if (![super isEqual: object]) return NO;
+
+    Book *other = (Book*) object;
+    return [self.author isEqualToString: other.author]
+        && [self.ISBN isEqualToString: other.ISBN];
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"Title: %@, Author: %@, ISBN: %@",

@@ -24,6 +24,11 @@
     [self.items addObject:item];
 }
 
+-(BOOL) containsItem:(Item *)item
+{
+    return [self.items containsObject:item];
+}
+
 -(void) printList
 {
     NSLog(@"%@", self.items);
