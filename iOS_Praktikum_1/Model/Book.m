@@ -15,7 +15,19 @@
     if (self = [super init])
     {
         self.author = @"";
-        self.ISBN = @"";
+        self.isbn = @"";
+    }
+
+    return self;
+}
+
+- initWithTitle:(NSString *)title author:(NSString*)autor isbn:(NSString*)isbn
+{
+    if (self = [self init])
+    {
+        self.title = title;
+        self.author = autor;
+        self.isbn = isbn;
     }
 
     return self;
@@ -27,12 +39,12 @@
 
     Book *other = (Book*) object;
     return [self.author isEqualToString: other.author]
-        && [self.ISBN isEqualToString: other.ISBN];
+        && [self.isbn isEqualToString: other.isbn];
 }
 
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"Title: %@, Author: %@, ISBN: %@",
-            self.title, self.author, self.ISBN];
+            self.title, self.author, self.isbn];
 }
 @end

@@ -6,19 +6,17 @@
 //  Copyright (c) 2014 Haw-Hamburg. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BookDetailViewController.h"
 
-@interface ViewController ()
+@interface BookDetailViewController ()
 
 @end
 
-@implementation ViewController
+@implementation BookDetailViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.manager = [[ItemListManager alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +45,7 @@
 
     book.title = self.txtTitle.text;
     book.author = self.txtAuthor.text;
-    book.ISBN = self.txtISBN.text;
+    book.isbn = self.txtISBN.text;
 
     return book;
 }

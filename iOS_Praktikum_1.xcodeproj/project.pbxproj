@@ -23,7 +23,9 @@
 		3165B68E18F0700700CC41F0 /* ItemListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3165B68D18F0700700CC41F0 /* ItemListManager.m */; };
 		F11782E418F405BF004F078D /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = F11782E118F405BF004F078D /* Book.m */; };
 		F11782E518F405BF004F078D /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = F11782E318F405BF004F078D /* Item.m */; };
-		F1B6C78E190681DB00CC85B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B6C78D190681DB00CC85B7 /* ViewController.m */; };
+		F15B9092190AD2B200F82517 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F15B9091190AD2B200F82517 /* BookTableViewCell.m */; };
+		F15B9096190AD66200F82517 /* BookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F15B9095190AD66200F82517 /* BookTableViewController.m */; };
+		F1B6C78E190681DB00CC85B7 /* BookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B6C78D190681DB00CC85B7 /* BookDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +62,12 @@
 		F11782E118F405BF004F078D /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Model/Book.m; sourceTree = "<group>"; };
 		F11782E218F405BF004F078D /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = Model/Item.h; sourceTree = "<group>"; };
 		F11782E318F405BF004F078D /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Model/Item.m; sourceTree = "<group>"; };
-		F1B6C78C190681DB00CC85B7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ViewController/ViewController.h; sourceTree = "<group>"; };
-		F1B6C78D190681DB00CC85B7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ViewController/ViewController.m; sourceTree = "<group>"; };
+		F15B9090190AD2B200F82517 /* BookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookTableViewCell.h; path = TableViewCell/BookTableViewCell.h; sourceTree = "<group>"; };
+		F15B9091190AD2B200F82517 /* BookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookTableViewCell.m; path = TableViewCell/BookTableViewCell.m; sourceTree = "<group>"; };
+		F15B9094190AD66200F82517 /* BookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookTableViewController.h; path = ViewController/BookTableViewController.h; sourceTree = "<group>"; };
+		F15B9095190AD66200F82517 /* BookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookTableViewController.m; path = ViewController/BookTableViewController.m; sourceTree = "<group>"; };
+		F1B6C78C190681DB00CC85B7 /* BookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailViewController.h; path = ViewController/BookDetailViewController.h; sourceTree = "<group>"; };
+		F1B6C78D190681DB00CC85B7 /* BookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookDetailViewController.m; path = ViewController/BookDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		3165B65918F06B8700CC41F0 /* iOS_Praktikum_1 */ = {
 			isa = PBXGroup;
 			children = (
+				F15B9093190AD2BA00F82517 /* TableViewCell */,
 				F1B6C78B1906819B00CC85B7 /* ViewController */,
 				3165B68818F06BD700CC41F0 /* Model */,
 				3165B68C18F0700700CC41F0 /* ItemListManager.h */,
@@ -174,11 +181,22 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F15B9093190AD2BA00F82517 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F15B9090190AD2B200F82517 /* BookTableViewCell.h */,
+				F15B9091190AD2B200F82517 /* BookTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		F1B6C78B1906819B00CC85B7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F1B6C78C190681DB00CC85B7 /* ViewController.h */,
-				F1B6C78D190681DB00CC85B7 /* ViewController.m */,
+				F15B9094190AD66200F82517 /* BookTableViewController.h */,
+				F15B9095190AD66200F82517 /* BookTableViewController.m */,
+				F1B6C78C190681DB00CC85B7 /* BookDetailViewController.h */,
+				F1B6C78D190681DB00CC85B7 /* BookDetailViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -280,11 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1B6C78E190681DB00CC85B7 /* ViewController.m in Sources */,
+				F1B6C78E190681DB00CC85B7 /* BookDetailViewController.m in Sources */,
+				F15B9092190AD2B200F82517 /* BookTableViewCell.m in Sources */,
 				F11782E518F405BF004F078D /* Item.m in Sources */,
 				F11782E418F405BF004F078D /* Book.m in Sources */,
 				3165B66418F06B8700CC41F0 /* AppDelegate.m in Sources */,
 				3165B68E18F0700700CC41F0 /* ItemListManager.m in Sources */,
+				F15B9096190AD66200F82517 /* BookTableViewController.m in Sources */,
 				3165B66018F06B8700CC41F0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

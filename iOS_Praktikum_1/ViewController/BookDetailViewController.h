@@ -10,7 +10,7 @@
 #import "ItemListManager.h"
 #import "Book.h"
 
-@interface ViewController : UIViewController
+@interface BookDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *txtAuthor;
 @property (weak, nonatomic) IBOutlet UITextField *txtTitle;

@@ -11,10 +11,10 @@
 
 @interface ItemListManager : NSObject
 
-@property (strong,nonatomic) NSMutableArray *items;
-
 -(void) addItem:(Item*) item;
 -(BOOL) containsItem:(Item*) item;
+-(Item*) objectAtIntex:(NSUInteger)index;
+-(NSUInteger) count;
 -(void) printList;
 
 @end

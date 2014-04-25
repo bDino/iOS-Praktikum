@@ -8,6 +8,12 @@
 
 #import "ItemListManager.h"
 
+@interface ItemListManager ()
+
+@property (strong,nonatomic) NSMutableArray *items;
+
+@end
+
 @implementation ItemListManager
 
 -(id)init
@@ -17,6 +23,18 @@
         self.items = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+
+
+-(NSUInteger) count
+{
+    return [self.items count];
+}
+
+-(Item*) objectAtIntex:(NSUInteger)index
+{
+    return [self.items objectAtIndex:index];
 }
 
 -(void) addItem:(NSObject *)item
@@ -33,5 +51,7 @@
 {
     NSLog(@"%@", self.items);
 }
+
+
 
 @end
