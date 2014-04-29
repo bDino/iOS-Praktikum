@@ -28,18 +28,23 @@
     
     self.itemListManager = [[ItemListManager alloc] init];
 
-    Book *book1 = [[Book alloc] initWithTitle:@"A"
-                                       author:@"a1"
-                                         isbn:@"a2"];
+    Book *book1 = [[Book alloc] initWithTitle:@"Fight Club"
+                                       author:@"Chuck Palahniuk"
+                                         isbn:@"978-3442542109"];
 
-    Book *book2 = [[Book alloc] initWithTitle:@"A"
-                                       author:@"b"
-                                         isbn:@"c"];
+    Book *book2 = [[Book alloc] initWithTitle:@"On the Road"
+                                       author:@"Jack Kerouac"
+                                         isbn:@"978-0141182674"];
 
-    Book *book3 = [[Book alloc] initWithTitle:@"A"
-                                       author:@"b"
-                                         isbn:@"c"];
+    Book *book3 = [[Book alloc] initWithTitle:@"Pippi Langstrumpf"
+                                       author:@"Astrid Lindgren"
+                                         isbn:@"978-3789141614"];
 
+    
+    Book *book4 = [[Book alloc] initWithTitle:@"The Ultima Power Fail Collection"
+                                       author:@"POWER FAIL"
+                                         isbn:@"876-9384756384"];
+    
     [self.itemListManager addItem: book1];
     [self.itemListManager addItem: book2];
     [self.itemListManager addItem: book3];

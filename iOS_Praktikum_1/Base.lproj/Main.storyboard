@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZpH-cs-qRt">
-                                <rect key="frame" x="108" y="116" width="192" height="30"/>
+                                <rect key="frame" x="108" y="104" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -29,7 +29,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KvC-mR-x90">
-                                <rect key="frame" x="108" y="169" width="192" height="30"/>
+                                <rect key="frame" x="108" y="138" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDj-8Z-LEF">
-                                <rect key="frame" x="20" y="119" width="80" height="21"/>
+                                <rect key="frame" x="20" y="107" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="x5A-vB-009"/>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q68-KU-Gvc">
-                                <rect key="frame" x="20" y="173" width="80" height="21"/>
+                                <rect key="frame" x="20" y="142" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="oer-aY-yXE"/>
@@ -67,6 +67,7 @@
                         <constraints>
                             <constraint firstItem="Tgu-hQ-Pmp" firstAttribute="baseline" secondItem="zIa-fB-DSh" secondAttribute="baseline" id="0pR-TE-yIt"/>
                             <constraint firstItem="ZpH-cs-qRt" firstAttribute="leading" secondItem="WDj-8Z-LEF" secondAttribute="trailing" constant="8" id="5Ng-zu-25I"/>
+                            <constraint firstItem="WDj-8Z-LEF" firstAttribute="top" secondItem="Tgu-hQ-Pmp" secondAttribute="bottom" constant="13" id="AJN-q5-8YO"/>
                             <constraint firstItem="zIa-fB-DSh" firstAttribute="leading" secondItem="Tgu-hQ-Pmp" secondAttribute="trailing" constant="8" id="E4w-B2-xbL"/>
                             <constraint firstItem="q68-KU-Gvc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="KT9-SE-pbG"/>
                             <constraint firstAttribute="trailing" secondItem="KvC-mR-x90" secondAttribute="trailing" constant="20" id="L2k-5O-q2T"/>
@@ -75,11 +76,12 @@
                             <constraint firstItem="KvC-mR-x90" firstAttribute="leading" secondItem="q68-KU-Gvc" secondAttribute="trailing" constant="8" id="cEb-vS-QKU"/>
                             <constraint firstItem="Tgu-hQ-Pmp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="9" id="fFr-bu-UQZ"/>
                             <constraint firstItem="Tgu-hQ-Pmp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="hg6-z7-98L"/>
+                            <constraint firstItem="ZpH-cs-qRt" firstAttribute="top" secondItem="zIa-fB-DSh" secondAttribute="bottom" constant="4" id="nP3-Ev-qHt"/>
                             <constraint firstAttribute="trailing" secondItem="zIa-fB-DSh" secondAttribute="trailing" constant="20" id="ncL-fc-iIp"/>
                             <constraint firstAttribute="trailing" secondItem="ZpH-cs-qRt" secondAttribute="trailing" constant="20" id="pkk-MW-gXe"/>
-                            <constraint firstItem="q68-KU-Gvc" firstAttribute="top" secondItem="WDj-8Z-LEF" secondAttribute="bottom" constant="33" id="q60-7C-UNr"/>
+                            <constraint firstItem="q68-KU-Gvc" firstAttribute="top" secondItem="WDj-8Z-LEF" secondAttribute="bottom" constant="14" id="qQD-hd-Uth"/>
                             <constraint firstItem="q68-KU-Gvc" firstAttribute="baseline" secondItem="KvC-mR-x90" secondAttribute="baseline" constant="1" id="uYO-zC-t6y"/>
-                            <constraint firstItem="WDj-8Z-LEF" firstAttribute="top" secondItem="Tgu-hQ-Pmp" secondAttribute="bottom" constant="25" id="wDc-V1-iJm"/>
+                            <constraint firstItem="KvC-mR-x90" firstAttribute="top" secondItem="ZpH-cs-qRt" secondAttribute="bottom" constant="4" id="wOE-VM-Tfe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S94-fv-miU"/>
