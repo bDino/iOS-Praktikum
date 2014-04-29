@@ -14,6 +14,7 @@
 {
     if (self = [super init])
     {
+        self.uuid = nil;
         self.title = @"";
     }
 

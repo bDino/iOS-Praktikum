@@ -12,6 +12,6 @@
 @interface BookTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) ItemListManager *itemListManager;
-@property (strong,nonatomic) UIBarButtonItem *btnPushToNewBook;
+@property (strong, nonatomic) UIBarButtonItem *btnPushToNewBook;
 
 @end

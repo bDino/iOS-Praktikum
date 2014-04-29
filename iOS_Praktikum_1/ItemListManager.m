@@ -26,20 +26,33 @@
 }
 
 
-
 -(NSUInteger) count
 {
     return [self.items count];
 }
 
--(Item*) objectAtIntex:(NSUInteger)index
+-(Item *) objectAtIntex:(NSUInteger)index
 {
     return [self.items objectAtIndex:index];
 }
 
--(void) addItem:(NSObject *)item
+-(Item *) saveItem:(Item *)item
 {
-    [self.items addObject:item];
+    if (item.uuid == nil)
+    {
+        item.uuid = [NSUUID UUID];
+        [self.items addObject:item];
+    }
+    else
+    {
+        NSUInteger index = [self.items indexOfObjectPassingTest:
+                            ^(id obj, NSUInteger idx, BOOL *stop) {
+                                return [item.uuid isEqual:[(Item *)obj uuid]];
+                            }];
+        [self.items replaceObjectAtIndex:index withObject:item];
+    }
+
+    return item;
 }
 
 -(BOOL) containsItem:(Item *)item

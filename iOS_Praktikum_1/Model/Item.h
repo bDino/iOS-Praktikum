@@ -10,6 +10,7 @@
 
 @interface Item : NSObject
 
+@property (strong,nonatomic) NSUUID *uuid;
 @property (strong,nonatomic) NSString *title;
 
 @end
