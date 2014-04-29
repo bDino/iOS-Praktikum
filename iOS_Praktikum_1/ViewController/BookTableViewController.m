@@ -43,12 +43,6 @@
     [self.itemListManager addItem: book1];
     [self.itemListManager addItem: book2];
     [self.itemListManager addItem: book3];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 -(IBAction)pushToNewBookView
@@ -59,12 +53,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.tableView reloadData];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 # pragma mark UITableViewDataSource methods
