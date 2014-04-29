@@ -21,6 +21,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="actionEditDidBeginAuthor:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="cLs-q7-7fT"/>
+                                    <action selector="actionEditDidEndAuthor:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="1KR-nY-zGw"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIa-fB-DSh">
                                 <rect key="frame" x="108" y="70" width="192" height="30"/>
@@ -33,6 +37,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="actionEditDidBeginISBN:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="TY3-tp-tMw"/>
+                                    <action selector="actionEditDidEndISBN:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="TUA-jw-eBL"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgu-hQ-Pmp">
                                 <rect key="frame" x="20" y="73" width="80" height="21"/>

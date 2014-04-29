@@ -68,7 +68,7 @@
     self.txtISBN.text = @"";
 }
 
-# pragma mark Navigation
+# pragma mark Edit
 
 - (void)saveEditedBook {
     self.bookItem.title = self.txtTitle.text;
@@ -76,6 +76,50 @@
     self.bookItem.isbn = self.txtISBN.text;
     
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+
+- (IBAction)actionEditDidBeginISBN:(id)sender {
+    [self animateTextField:self.txtISBN up:YES];
+}
+
+- (IBAction)actionEditDidBeginAuthor:(id)sender {
+    [self animateTextField:self.txtISBN up:YES];
+}
+
+
+- (IBAction)actionEditDidEndISBN:(id)sender {
+    [self animateTextField:self.txtISBN up:NO];
+}
+
+- (IBAction)actionEditDidEndAuthor:(id)sender {
+    [self animateTextField:self.txtISBN up:NO];
+}
+# pragma mark slideTextBox
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: YES];
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: NO];
+}
+
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    const int movementDistance = 80; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
+    
+    int movement = (up ? -movementDistance : movementDistance);
+    
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
 }
 
 @end
