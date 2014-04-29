@@ -18,13 +18,17 @@
     {
         self.btnAddBook.hidden = YES;
         
-        UIBarButtonItem *saveBtn = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveEditedBook)];
-        self.navigationItem.rightBarButtonItem = saveBtn;
-        
         self.txtAuthor.text = self.bookItem.author;
         self.txtTitle.text = self.bookItem.title;
         self.txtISBN.text = self.bookItem.isbn;
     }
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.bookItem.title = self.txtTitle.text;
+    self.bookItem.author = self.txtAuthor.text;
+    self.bookItem.isbn = self.txtISBN.text;
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,16 +70,6 @@
     self.txtAuthor.text = @"";
     self.txtTitle.text = @"";
     self.txtISBN.text = @"";
-}
-
-# pragma mark Edit
-
-- (void)saveEditedBook {
-    self.bookItem.title = self.txtTitle.text;
-    self.bookItem.author = self.txtAuthor.text;
-    self.bookItem.isbn = self.txtISBN.text;
-    
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

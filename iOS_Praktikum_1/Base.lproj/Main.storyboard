@@ -102,9 +102,7 @@
                             <constraint firstItem="WDj-8Z-LEF" firstAttribute="top" secondItem="Tgu-hQ-Pmp" secondAttribute="bottom" constant="25" id="wDc-V1-iJm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="S94-fv-miU">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="dLQ-h4-AtU"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="S94-fv-miU"/>
                     <connections>
                         <outlet property="btnAddBook" destination="G88-QD-mPq" id="TSm-nY-6Kn"/>
                         <outlet property="txtAuthor" destination="ZpH-cs-qRt" id="ArB-8a-arU"/>
@@ -178,7 +176,9 @@
                             <outlet property="delegate" destination="1lF-0c-DKY" id="A05-eE-Ob3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Books of Love" id="Mxi-9K-2FO"/>
+                    <navigationItem key="navigationItem" title="Books of Love" id="Mxi-9K-2FO">
+                        <barButtonItem key="backBarButtonItem" title="books" id="eRx-RE-vuO"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="pushSeqToAddBook" id="ZcC-3r-Z16"/>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="pushToDetail" id="WOM-NE-UkF"/>
