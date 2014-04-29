@@ -181,7 +181,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="pushSeqToAddBook" id="ZcC-3r-Z16"/>
-                        <segue destination="vXZ-lx-hvc" kind="push" identifier="pushToDetail" id="WOM-NE-UkF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tn-Lc-qhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -209,7 +208,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="WOM-NE-UkF"/>
-    </inferredMetricsTieBreakers>
 </document>

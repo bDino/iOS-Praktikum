@@ -97,7 +97,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.selectedIndex = indexPath.row;
-    [self performSegueWithIdentifier:@"pushToDetail" sender:self];
+    [self performSegueWithIdentifier:@"pushSeqToAddBook" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -106,12 +106,20 @@
     
     if ([segue.identifier isEqualToString:@"pushSeqToAddBook"]) {
         targetVB.manager = self.itemListManager;
-    }
-    else if([segue.identifier isEqualToString:@"pushToDetail"])
-    {
-        Book* book = (Book*)[self.itemListManager objectAtIntex:self.selectedIndex];
-        targetVB.bookItem = book;
-        targetVB.isEdit = YES;
+    
+        if(self.selectedIndex != -1)
+        {
+            Book* book = (Book*)[self.itemListManager objectAtIntex:self.selectedIndex];
+                targetVB.bookItem = book;
+        }
+        else
+        {
+            Book* newBook = [[Book alloc] initWithTitle:@""
+                                                 author:@""
+                                                   isbn:@""];
+            [self.itemListManager addItem:newBook];
+            targetVB.bookItem = newBook;
+        }
     }
 }
 
