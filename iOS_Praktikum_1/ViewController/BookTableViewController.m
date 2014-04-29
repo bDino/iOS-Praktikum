@@ -9,8 +9,11 @@
 #import "BookTableViewController.h"
 #import "Book.h"
 #import "BookTableViewCell.h"
+#import "BookDetailViewController.h"
 
 @interface BookTableViewController ()
+
+@property NSUInteger selectedIndex;
 
 @end
 
@@ -19,7 +22,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.btnPushToNewBook = [[UIBarButtonItem alloc] initWithTitle:@"Add Book" style:UIBarButtonItemStylePlain target:self action:@selector(pushToNewBookView)];
+    self.navigationItem.rightBarButtonItem = self.btnPushToNewBook;
+    
     self.itemListManager = [[ItemListManager alloc] init];
 
     Book *book1 = [[Book alloc] initWithTitle:@"A"
@@ -43,6 +49,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(IBAction)pushToNewBookView
+{
+    [self performSegueWithIdentifier:@"pushSeqToAddBook" sender:self];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -83,5 +94,25 @@
     return 108;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:@"pushToDetail" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    BookDetailViewController  *targetVB = (BookDetailViewController*)segue.destinationViewController;
+    
+    if ([segue.identifier isEqualToString:@"pushSeqToAddBook"]) {
+        targetVB.manager = self.itemListManager;
+    }
+    else if([segue.identifier isEqualToString:@"pushToDetail"])
+    {
+        Book* book = (Book*)[self.itemListManager objectAtIntex:self.selectedIndex];
+        targetVB.bookItem = book;
+        targetVB.isEdit = YES;
+    }
+}
 
 @end

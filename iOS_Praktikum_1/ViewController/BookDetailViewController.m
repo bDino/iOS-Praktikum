@@ -8,15 +8,23 @@
 
 #import "BookDetailViewController.h"
 
-@interface BookDetailViewController ()
-
-@end
-
 @implementation BookDetailViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if(self.isEdit)
+    {
+        self.btnAddBook.hidden = YES;
+        
+        UIBarButtonItem *saveBtn = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveEditedBook)];
+        self.navigationItem.rightBarButtonItem = saveBtn;
+        
+        self.txtAuthor.text = self.bookItem.author;
+        self.txtTitle.text = self.bookItem.title;
+        self.txtISBN.text = self.bookItem.isbn;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,7 +42,10 @@
         {
             [self.manager addItem:book];
             [self clearInputFields];
-            [self.manager printList];
+            //[self.manager printList];
+            
+            self.bookItem = nil;
+            [self.navigationController popToRootViewControllerAnimated:YES];
         }
     }
 }
@@ -55,6 +66,16 @@
     self.txtAuthor.text = @"";
     self.txtTitle.text = @"";
     self.txtISBN.text = @"";
+}
+
+# pragma mark Navigation
+
+- (void)saveEditedBook {
+    self.bookItem.title = self.txtTitle.text;
+    self.bookItem.author = self.txtAuthor.text;
+    self.bookItem.isbn = self.txtISBN.text;
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

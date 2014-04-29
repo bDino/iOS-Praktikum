@@ -20,5 +20,7 @@
 - (IBAction)actionAddBookToView:(id)sender;
 
 @property (strong,nonatomic) ItemListManager *manager;
+@property (strong,nonatomic) Book *bookItem;
+@property BOOL isEdit;
 
 @end
