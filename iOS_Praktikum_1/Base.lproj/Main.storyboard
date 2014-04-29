@@ -21,10 +21,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="actionEditDidBeginAuthor:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="cLs-q7-7fT"/>
-                                    <action selector="actionEditDidEndAuthor:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="1KR-nY-zGw"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIa-fB-DSh">
                                 <rect key="frame" x="108" y="70" width="192" height="30"/>
@@ -37,10 +33,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="actionEditDidBeginISBN:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="TY3-tp-tMw"/>
-                                    <action selector="actionEditDidEndISBN:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="TUA-jw-eBL"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgu-hQ-Pmp">
                                 <rect key="frame" x="20" y="73" width="80" height="21"/>
@@ -70,15 +62,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G88-QD-mPq">
-                                <rect key="frame" x="20" y="230" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <state key="normal" title="Add Book"/>
-                                <connections>
-                                    <action selector="actionAddBookToView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jHf-Fz-JQ8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -89,12 +72,9 @@
                             <constraint firstAttribute="trailing" secondItem="KvC-mR-x90" secondAttribute="trailing" constant="20" id="L2k-5O-q2T"/>
                             <constraint firstItem="ZpH-cs-qRt" firstAttribute="baseline" secondItem="WDj-8Z-LEF" secondAttribute="baseline" id="NCQ-ub-fRj"/>
                             <constraint firstItem="WDj-8Z-LEF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Tvu-V3-YYD"/>
-                            <constraint firstItem="G88-QD-mPq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Vn0-fS-pT8"/>
                             <constraint firstItem="KvC-mR-x90" firstAttribute="leading" secondItem="q68-KU-Gvc" secondAttribute="trailing" constant="8" id="cEb-vS-QKU"/>
-                            <constraint firstItem="G88-QD-mPq" firstAttribute="top" secondItem="q68-KU-Gvc" secondAttribute="bottom" constant="36" id="eRq-q8-4e1"/>
                             <constraint firstItem="Tgu-hQ-Pmp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="9" id="fFr-bu-UQZ"/>
                             <constraint firstItem="Tgu-hQ-Pmp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="hg6-z7-98L"/>
-                            <constraint firstAttribute="trailing" secondItem="G88-QD-mPq" secondAttribute="trailing" constant="20" id="ia1-pa-Dig"/>
                             <constraint firstAttribute="trailing" secondItem="zIa-fB-DSh" secondAttribute="trailing" constant="20" id="ncL-fc-iIp"/>
                             <constraint firstAttribute="trailing" secondItem="ZpH-cs-qRt" secondAttribute="trailing" constant="20" id="pkk-MW-gXe"/>
                             <constraint firstItem="q68-KU-Gvc" firstAttribute="top" secondItem="WDj-8Z-LEF" secondAttribute="bottom" constant="33" id="q60-7C-UNr"/>
@@ -104,7 +84,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="S94-fv-miU"/>
                     <connections>
-                        <outlet property="btnAddBook" destination="G88-QD-mPq" id="TSm-nY-6Kn"/>
                         <outlet property="txtAuthor" destination="ZpH-cs-qRt" id="ArB-8a-arU"/>
                         <outlet property="txtISBN" destination="KvC-mR-x90" id="aCT-YR-0YD"/>
                         <outlet property="txtTitle" destination="zIa-fB-DSh" id="lPq-gt-kQK"/>

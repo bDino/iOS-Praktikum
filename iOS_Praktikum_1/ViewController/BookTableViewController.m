@@ -14,7 +14,7 @@
 @interface BookTableViewController ()
 
 @property NSUInteger selectedIndex;
-
+@property BOOL isEdit;
 @end
 
 @implementation BookTableViewController
@@ -53,6 +53,7 @@
 
 -(IBAction)pushToNewBookView
 {
+    self.isEdit = NO;
     [self performSegueWithIdentifier:@"pushSeqToAddBook" sender:self];
 }
 
@@ -96,6 +97,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.isEdit = YES;
     self.selectedIndex = indexPath.row;
     [self performSegueWithIdentifier:@"pushSeqToAddBook" sender:self];
 }
@@ -107,7 +109,7 @@
     if ([segue.identifier isEqualToString:@"pushSeqToAddBook"]) {
         targetVB.manager = self.itemListManager;
     
-        if(self.selectedIndex != -1)
+        if(self.isEdit)
         {
             Book* book = (Book*)[self.itemListManager objectAtIntex:self.selectedIndex];
                 targetVB.bookItem = book;
@@ -117,7 +119,6 @@
             Book* newBook = [[Book alloc] initWithTitle:@""
                                                  author:@""
                                                    isbn:@""];
-            [self.itemListManager addItem:newBook];
             targetVB.bookItem = newBook;
         }
     }
