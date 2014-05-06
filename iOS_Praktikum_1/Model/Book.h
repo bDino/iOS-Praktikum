@@ -14,6 +14,6 @@
 @property (strong,nonatomic) NSString *author;
 @property (strong,nonatomic) NSString *isbn;
 
-- initWithTitle:(NSString *)title author:(NSString*)autor isbn:(NSString*)isbn;
+- initWithTitle:(NSString *)title author:(NSString*)autor isbn:(NSString*)isbn image:(UIImage *)image;
 
 @end

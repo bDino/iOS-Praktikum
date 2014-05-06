@@ -30,20 +30,24 @@
 
     Book *book1 = [[Book alloc] initWithTitle:@"Fight Club"
                                        author:@"Chuck Palahniuk"
-                                         isbn:@"978-3442542109"];
+                                         isbn:@"978-3442542109"
+                                        image:[UIImage imageNamed:@"fight_club.jpg"]];
 
     Book *book2 = [[Book alloc] initWithTitle:@"On the Road"
                                        author:@"Jack Kerouac"
-                                         isbn:@"978-0141182674"];
+                                         isbn:@"978-0141182674"
+                                        image:[UIImage imageNamed:@"on_the_road.jpg"]];
 
     Book *book3 = [[Book alloc] initWithTitle:@"Pippi Langstrumpf"
                                        author:@"Astrid Lindgren"
-                                         isbn:@"978-3789141614"];
+                                         isbn:@"978-3789141614"
+                                        image:[UIImage imageNamed:@"pippi_langstrump.jpg"]];
 
     
-    Book *book4 = [[Book alloc] initWithTitle:@"The Ultima Power Fail Collection"
+    Book *book4 = [[Book alloc] initWithTitle:@"The Ultimate of Power Fail"
                                        author:@"POWER FAIL"
-                                         isbn:@"876-9384756384"];
+                                         isbn:@"876-9384756384"
+                                        image:[UIImage imageNamed:@"power_fail.png"]];
     
     [self.itemListManager addItem: book1];
     [self.itemListManager addItem: book2];
@@ -73,6 +77,7 @@
     cell.title.text = book.title;
     cell.author.text = book.author;
     cell.isbn.text = book.isbn;
+    cell.image.image = book.image;
 
     return cell;
 }

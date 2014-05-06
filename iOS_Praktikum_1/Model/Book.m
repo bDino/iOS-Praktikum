@@ -21,13 +21,14 @@
     return self;
 }
 
-- initWithTitle:(NSString *)title author:(NSString*)autor isbn:(NSString*)isbn
+- initWithTitle:(NSString *)title author:(NSString*)autor isbn:(NSString*)isbn image:(UIImage *)image
 {
     if (self = [self init])
     {
         self.title = title;
         self.author = autor;
         self.isbn = isbn;
+        self.image = image;
     }
 
     return self;

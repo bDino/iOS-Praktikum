@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310D1126191920BE005A4EF7 /* fight_club.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310D1125191920BE005A4EF7 /* fight_club.jpg */; };
+		310D11291919211C005A4EF7 /* on_the_road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310D11271919211C005A4EF7 /* on_the_road.jpg */; };
+		310D112A1919211C005A4EF7 /* pippi_langstrump.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310D11281919211C005A4EF7 /* pippi_langstrump.jpg */; };
+		310D112C1919216A005A4EF7 /* power_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 310D112B1919216A005A4EF7 /* power_fail.png */; };
 		3165B65418F06B8700CC41F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3165B65318F06B8700CC41F0 /* Foundation.framework */; };
 		3165B65618F06B8700CC41F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3165B65518F06B8700CC41F0 /* CoreGraphics.framework */; };
 		3165B65818F06B8700CC41F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3165B65718F06B8700CC41F0 /* UIKit.framework */; };
@@ -39,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		310D1125191920BE005A4EF7 /* fight_club.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fight_club.jpg; sourceTree = "<group>"; };
+		310D11271919211C005A4EF7 /* on_the_road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = on_the_road.jpg; sourceTree = "<group>"; };
+		310D11281919211C005A4EF7 /* pippi_langstrump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pippi_langstrump.jpg; sourceTree = "<group>"; };
+		310D112B1919216A005A4EF7 /* power_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_fail.png; sourceTree = "<group>"; };
 		3165B65018F06B8700CC41F0 /* iOS_Praktikum_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Praktikum_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3165B65318F06B8700CC41F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3165B65518F06B8700CC41F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,9 +102,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310D111E19191B74005A4EF7 /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				310D112B1919216A005A4EF7 /* power_fail.png */,
+				310D11271919211C005A4EF7 /* on_the_road.jpg */,
+				310D11281919211C005A4EF7 /* pippi_langstrump.jpg */,
+				310D1125191920BE005A4EF7 /* fight_club.jpg */,
+			);
+			name = Img;
+			path = iOS_Praktikum_1/Img;
+			sourceTree = "<group>";
+		};
 		3165B64718F06B8700CC41F0 = {
 			isa = PBXGroup;
 			children = (
+				310D111E19191B74005A4EF7 /* Img */,
 				3165B65918F06B8700CC41F0 /* iOS_Praktikum_1 */,
 				3165B67818F06B8700CC41F0 /* iOS_Praktikum_1Tests */,
 				3165B65218F06B8700CC41F0 /* Frameworks */,
@@ -277,6 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310D112C1919216A005A4EF7 /* power_fail.png in Resources */,
+				310D1126191920BE005A4EF7 /* fight_club.jpg in Resources */,
+				310D112A1919211C005A4EF7 /* pippi_langstrump.jpg in Resources */,
+				310D11291919211C005A4EF7 /* on_the_road.jpg in Resources */,
 				3165B66C18F06B8700CC41F0 /* Images.xcassets in Resources */,
 				3165B65E18F06B8700CC41F0 /* InfoPlist.strings in Resources */,
 				3165B66718F06B8700CC41F0 /* Main.storyboard in Resources */,
