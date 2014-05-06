@@ -112,14 +112,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Book Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M9-6b-paP">
-                                            <rect key="frame" x="96" y="20" width="217" height="21"/>
+                                            <rect key="frame" x="96" y="32" width="217" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Irv-qf-raj">
-                                            <rect key="frame" x="96" y="49" width="217" height="15"/>
+                                            <rect key="frame" x="96" y="13" width="217" height="15"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="highlightedColor"/>
@@ -140,9 +140,9 @@
                                         <constraint firstItem="YCx-9b-xTb" firstAttribute="top" secondItem="fbg-bX-gV5" secondAttribute="top" constant="4" id="4Xj-xD-f8g"/>
                                         <constraint firstItem="oe3-qW-mTL" firstAttribute="leading" secondItem="YCx-9b-xTb" secondAttribute="trailing" constant="8" id="DeH-m6-A80"/>
                                         <constraint firstItem="Irv-qf-raj" firstAttribute="leading" secondItem="YCx-9b-xTb" secondAttribute="trailing" constant="8" id="E3o-ma-AF6"/>
-                                        <constraint firstItem="5M9-6b-paP" firstAttribute="top" secondItem="fbg-bX-gV5" secondAttribute="top" constant="20" id="Pb8-Wx-DJN"/>
-                                        <constraint firstItem="Irv-qf-raj" firstAttribute="top" secondItem="5M9-6b-paP" secondAttribute="bottom" constant="8" id="Pfk-k0-aKS"/>
-                                        <constraint firstItem="oe3-qW-mTL" firstAttribute="top" secondItem="Irv-qf-raj" secondAttribute="bottom" constant="8" id="VL4-qo-UMQ"/>
+                                        <constraint firstItem="5M9-6b-paP" firstAttribute="top" secondItem="Irv-qf-raj" secondAttribute="bottom" constant="4" id="HIB-iM-REf"/>
+                                        <constraint firstAttribute="centerX" secondItem="Irv-qf-raj" secondAttribute="centerX" constant="-44.5" id="JYP-Zh-Z0V"/>
+                                        <constraint firstItem="oe3-qW-mTL" firstAttribute="top" secondItem="5M9-6b-paP" secondAttribute="bottom" constant="19" id="UtW-El-FGS"/>
                                         <constraint firstItem="YCx-9b-xTb" firstAttribute="leading" secondItem="fbg-bX-gV5" secondAttribute="leading" constant="7" id="lyW-QR-84i"/>
                                         <constraint firstItem="5M9-6b-paP" firstAttribute="leading" secondItem="YCx-9b-xTb" secondAttribute="trailing" constant="8" id="v5R-uf-DE6"/>
                                     </constraints>
