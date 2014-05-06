@@ -32,11 +32,8 @@
 {
     if(![self.txtTitle.text isEqualToString:@""] && ![self.txtISBN.text isEqualToString:@""])
     {
-        Book *book = [self createBookFromInputs];
-        if (![self.manager containsItem: book])
-        {
-            [self.manager addItem:book];
-        }
+        [self.bookManagerDelegate itemAdded:[self createBookFromInputs]];
+        self.isEdit = NO;
         
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
@@ -45,16 +42,15 @@
 - (Book*)createBookFromInputs
 {
     Book *book;
-
-    if(self.bookItem != nil)
+    
+    if(self.isEdit)
     {
         book = self.bookItem;
-    }
-    else
+    }else
     {
         book = [[Book alloc] init];
     }
-
+    
     book.title = self.txtTitle.text;
     book.author = self.txtAuthor.text;
     book.isbn = self.txtISBN.text;

@@ -14,7 +14,7 @@
 @interface BookTableViewController ()
 
 @property NSUInteger selectedIndex;
-@property BOOL isEdit;
+
 @end
 
 @implementation BookTableViewController
@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
     
-    self.btnPushToNewBook = [[UIBarButtonItem alloc] initWithTitle:@"Add Book" style:UIBarButtonItemStylePlain target:self action:@selector(pushToNewBookView)];
+    self.btnPushToNewBook = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self action:@selector(pushToNewBookView)];
     self.navigationItem.rightBarButtonItem = self.btnPushToNewBook;
     
     self.itemListManager = [[ItemListManager alloc] init];
@@ -48,12 +48,8 @@
     [self.itemListManager addItem: book1];
     [self.itemListManager addItem: book2];
     [self.itemListManager addItem: book3];
-}
-
--(IBAction)pushToNewBookView
-{
-    self.isEdit = NO;
-    [self performSegueWithIdentifier:@"pushSeqToAddBook" sender:self];
+    [self.itemListManager addItem: book4];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -61,7 +57,12 @@
     [self.tableView reloadData];
 }
 
-# pragma mark UITableViewDataSource methods
+-(IBAction)pushToNewBookView
+{
+    [self performSegueWithIdentifier:@"pushSeqNewBook" sender:self];
+}
+
+# pragma mark - UITableViewDataSource methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -81,7 +82,7 @@
     return [self.itemListManager count];
 }
 
-# pragma mark UITableViewDelegate methods
+# pragma mark - UITableViewDelegate methods
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -90,7 +91,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.isEdit = YES;
     self.selectedIndex = indexPath.row;
     [self performSegueWithIdentifier:@"pushSeqToAddBook" sender:self];
 }
@@ -100,21 +100,20 @@
     BookDetailViewController  *targetVB = (BookDetailViewController*)segue.destinationViewController;
     
     if ([segue.identifier isEqualToString:@"pushSeqToAddBook"]) {
-        targetVB.manager = self.itemListManager;
-    
-        if(self.isEdit)
-        {
-            Book* book = (Book*)[self.itemListManager objectAtIntex:self.selectedIndex];
-                targetVB.bookItem = book;
-        }
-        else
-        {
-            Book* newBook = [[Book alloc] initWithTitle:@""
-                                                 author:@""
-                                                   isbn:@""];
-            targetVB.bookItem = newBook;
-        }
+
+        Book* book = (Book*)[self.itemListManager objectAtIntex:self.selectedIndex];
+        targetVB.bookItem = book;
+        targetVB.isEdit = YES;
     }
+    
+        targetVB.bookManagerDelegate = self;
+}
+
+# pragma mark - BookItemManagerDelegate
+
+-(void)itemAdded:(Item *) item
+{
+    [self.itemListManager addItem:item];
 }
 
 @end

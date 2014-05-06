@@ -9,9 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "ItemListManager.h"
 
-@interface BookTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@protocol BookItemManagerDelegate <NSObject>
+
+-(void) itemAdded:(Item *) item;
+
+@end
+
+@interface BookTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, BookItemManagerDelegate>
 
 @property (strong, nonatomic) ItemListManager *itemListManager;
 @property (strong,nonatomic) UIBarButtonItem *btnPushToNewBook;
 
 @end
+
